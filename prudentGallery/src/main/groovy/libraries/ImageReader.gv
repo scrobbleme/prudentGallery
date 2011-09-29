@@ -1,0 +1,19 @@
+
+getGalleries = { folderPath ->
+    File folder = new File(folderPath)
+    if(!folder.exists() || folder.isFile()){
+        return []
+    }
+    def result = []
+    File[] children = folder.listFiles()
+    for(File child in children){
+        if(child.isDirectory()){
+            result.push(child.getName())
+        }
+    }
+}
+/**
+ * @param folder
+ * @returns All images within the given folder.
+ */
+getPictures = { folder -> return []}

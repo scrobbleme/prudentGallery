@@ -1,0 +1,8 @@
+body {
+    background-color: black;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+}

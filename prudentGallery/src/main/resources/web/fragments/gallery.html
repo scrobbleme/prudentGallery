@@ -1,0 +1,19 @@
+<%
+galleries = getGalleries(basePath + galleryBase)
+pictures = getPictures(basePath + galleryBase)
+%>
+<% if(galleries.length > 0){ %>
+<h1>Galleries</h1>
+    <div class="galleries">
+    	<% for(gallery in galleries){ %>
+    	    <a href="?gallery=<%= galleryBase + '/' + galleries[gallery] %>"><%= galleries[gallery] %><br /></a>
+    	<% } %>
+    </div>
+<% } %>
+<% if(pictures.length > 0){ %>
+<div class="gallery">
+	<% for(picture in pictures){ %>
+      <a href="image/?size=large&image=<%= galleryBase + '/' + pictures[picture] %>" rel="lightbox"><img src="image/?size=small&image=<%= galleryBase + '/' + pictures[picture] %>" /></a>
+	<% } %>
+</div>
+<% } %>
