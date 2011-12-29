@@ -1,5 +1,10 @@
 body {
     background-color: black;
+    color: #FFF;
+}
+
+a {
+    color: #FFF;
 }
 
 .gallery img {

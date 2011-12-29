@@ -1,22 +1,22 @@
 <%
-document.executeOnce('/ImageReader/')
+document.executeOnce('/ImageReader/');
 %>
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Scrobble Gallery</title>
+        <title>prudentGallery</title>
         <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="css/scrobbleGallery.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/prudentGallery.css" type="text/css" media="screen" />
         <script src="js/prototype.js" type="text/javascript"></script>
         <script src="js/scriptaculous.js?load=effects,builder" type="text/javascript"></script>
         <script src="js/lightbox.js" type="text/javascript"></script>
     </head>
     <body>
         <% 
-            basePath = application.globals.get("com.threecrickets.prudence.DelegatedResource.fileUploadDirectory") + "/"
-            galleryBase =  conversation.query.get("gallery")
-            galleryBase = galleryBase == null ? '': galleryBase
-            if(galleryBase.indexOf("".."") > -1){
+            basePath = application.globals.get("com.threecrickets.prudence.DelegatedResource.fileUploadDirectory") + "/";
+            galleryBase =  conversation.query.get("gallery");
+            galleryBase = galleryBase == null ? '': galleryBase;
+            if(galleryBase.indexOf("..") > -1){
                 %><%& '/error/' %><%
             }else{
                 %><%& '/gallery/' %><%
