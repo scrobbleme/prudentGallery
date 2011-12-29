@@ -1,7 +1,7 @@
 prudentGallery
 ==============
 
-This is an simple gallery application for Prudence (http://threecrickets.com/prudence).
+This is a gallery application for Prudence (http://threecrickets.com/prudence).
 
 It simple shows images from folders as gallery using Shadowbox 3.0.3 (http://www.shadowbox-js.com/). You can find a demo at http://euve1500.vserver.de:9080/gallery
 
@@ -30,3 +30,8 @@ Instead of using the standard mechanism of resizing the preview, it is recommend
 * Download and install IrfanView: http://www.irfanview.net/
 * Edit the file "settings.js" within the applications folder:
 ** Add the line: Packages.me.scrobble.images.ImageUtils.setImageScaler(new Packages.me.scrobble.images.scalers.IrfanViewImageScaler())
+
+License:
+========
+
+You can freely use, edit and distribute this gallery as want. To use it for commercial purposes you have to obtain a commercial license for Shadowbox.
