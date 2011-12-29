@@ -5,11 +5,13 @@ document.executeOnce('/ImageReader/');
 <html>
     <head>
         <title>prudentGallery</title>
-        <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+        <link rel="icon" href="favicon.png" type="image/png">
         <link rel="stylesheet" href="css/prudentGallery.css" type="text/css" media="screen" />
-        <script src="js/prototype.js" type="text/javascript"></script>
-        <script src="js/scriptaculous.js?load=effects,builder" type="text/javascript"></script>
-        <script src="js/lightbox.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="frameworks/shadowbox/shadowbox.css" type="text/css" media="screen" />
+        <script src="frameworks/shadowbox/shadowbox.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            Shadowbox.init({overlayOpacity: 0.7});
+        </script>
     </head>
     <body>
         <% 
@@ -22,5 +24,8 @@ document.executeOnce('/ImageReader/');
                 %><%& '/gallery/' %><%
             }
          %>
+         <div id="footer">
+            <a href="http://blog.scrobble.me/tag/prudentGallery/">prudentGallery by Adrian M&ouml;rchen</a>
+         </div>
     </body>
 </html>

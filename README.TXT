@@ -1,0 +1,30 @@
+prudentGallery
+==============
+
+This is an simple gallery application for Prudence (http://threecrickets.com/prudence).
+
+It simple shows images from folders as gallery using Shadowbox 3.0.3 (http://www.shadowbox-js.com/). You can find a demo at http://prudentGallery.scrobble.me
+
+Installation:
+=============
+
+* Download and Install Prudence with Javascript flavor.
+* Drop image-utils-XYZ.jar in Prudences "libraries" folder
+* Extract prudentGallery into Prudences "application" folder (and rename it to your needs)
+
+Configuration:
+==============
+
+Upload images:
+--------------
+
+* Create a folder "uploads" within the applications folder
+* Upload your images to this folder (This folder can contain folders too)
+
+IrfanView:
+----------
+Instead of using the standard mechanism of resizing the preview, it is recommended to use IrfanView (only Windows, http://www.irfanview.net/).
+
+* Download and install IrfanView: http://www.irfanview.net/
+* Edit the file "settings.js" within the applications folder:
+** Add the line: Packages.me.scrobble.images.ImageUtils.setImageScaler(new Packages.me.scrobble.images.scalers.IrfanViewImageScaler())

@@ -1,11 +1,11 @@
 var cacheFolder = application.globals.get('com.threecrickets.prudence.DelegatedResource.fileUploadDirectory')
-        + '/../../../cache/scrobbleGallery/'
+        + '/../../../cache/prudentGallery/'
 /**
  * @param conversation
  *            The conversation.
  */
 function handleInit(conversation) {
-    conversation.addMediaTypeByName('image/jpg');
+    conversation.addMediaTypeByName('image/jpeg');
 }
 /**
  * @param conversation

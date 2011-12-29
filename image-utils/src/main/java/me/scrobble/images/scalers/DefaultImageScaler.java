@@ -4,7 +4,6 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.Transparency;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 
 import javax.imageio.ImageIO;
@@ -29,8 +28,9 @@ public class DefaultImageScaler implements ImageScaler {
             width = preserveAspectRatio ? (int) ((double) width * ((double) width / (double) height)) : width;
             BufferedImage resizedImage = getScaledInstance(originalImage, width, height,
                     RenderingHints.VALUE_INTERPOLATION_BILINEAR, true);
-            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-            ImageIO.write(resizedImage, "jpeg", outputStream);
+            File targetFile = new File(targetPath);
+            targetFile.mkdirs();
+            ImageIO.write(resizedImage, "jpeg", targetFile);
         } catch (Exception e) {
             throw new ImageScalerException(e);
         }

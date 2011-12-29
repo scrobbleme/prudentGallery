@@ -2,22 +2,30 @@ package me.scrobble.images;
 
 import java.util.concurrent.ExecutionException;
 
+import me.scrobble.images.scalers.DefaultImageScaler;
 import me.scrobble.images.scalers.ImageScaler;
 import me.scrobble.images.scalers.ImageScalerException;
-import me.scrobble.images.scalers.IrfanViewImageScaler;
 
 /**
  * Utility class to help with images.
  */
 public class ImageUtils {
 
-    private static final ImageScaler IMAGE_SCALER = new IrfanViewImageScaler();
+    private static ImageScaler IMAGE_SCALER = new DefaultImageScaler();
 
     /**
      * Utility class constructor.
      */
     private ImageUtils() {
-        // Do nothing
+        // Do nothing.
+    }
+
+    /**
+     * @param imageScaler
+     *            The {@link ImageScaler} to use.
+     */
+    public static void setImageScaler(ImageScaler imageScaler) {
+        IMAGE_SCALER = imageScaler;
     }
 
     /**

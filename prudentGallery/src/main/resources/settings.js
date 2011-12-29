@@ -8,3 +8,5 @@ applicationHomeURL = 'http://www.scrobble.me/'
 applicationContactEmail = 'prudentGallery@rest.scrobble.me'
 
 showDebugOnError = true
+
+Packages.me.scrobble.images.ImageUtils.setImageScaler(new Packages.me.scrobble.images.scalers.IrfanViewImageScaler())

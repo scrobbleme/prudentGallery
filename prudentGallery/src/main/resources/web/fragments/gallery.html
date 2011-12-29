@@ -12,8 +12,8 @@ pictures = getPictures(basePath + galleryBase)
 <% } %>
 <% if(pictures.length > 0){ %>
 <div class="gallery">
-	<% for(picture in pictures){ %>
-      <a href="image/?size=large&image=<%= galleryBase + '/' + pictures[picture] %>" rel="lightbox"><img src="image/?size=small&image=<%= galleryBase + '/' + pictures[picture] %>" /></a>
-	<% } %>
+	<% for(picture in pictures){ 
+        %><a href="image/?size=large&image=<%= galleryBase + '/' + pictures[picture] %>" rel="shadowbox[gallery];player=img"><img src="image/?size=small&image=<%= galleryBase + '/' + pictures[picture] %>" /></a>
+        <% } %>
 </div>
 <% } %>
