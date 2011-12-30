@@ -6,12 +6,16 @@ import me.scrobble.images.scalers.DefaultImageScaler;
 import me.scrobble.images.scalers.ImageScaler;
 import me.scrobble.images.scalers.ImageScalerException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Utility class to help with images.
  */
 public class ImageUtils {
 
     private static ImageScaler IMAGE_SCALER = new DefaultImageScaler();
+    private final static Logger LOGGER = LoggerFactory.getLogger(ImageUtils.class);
 
     /**
      * Utility class constructor.
@@ -26,6 +30,7 @@ public class ImageUtils {
      */
     public static void setImageScaler(ImageScaler imageScaler) {
         IMAGE_SCALER = imageScaler;
+        LOGGER.info("Use ImageScaler: {}", imageScaler.getClass());
     }
 
     /**
