@@ -1,6 +1,7 @@
 prudentGallery
 ==============
 
+
 This is a gallery application for Prudence (http://threecrickets.com/prudence).
 
 It simple shows images from folders as gallery using Shadowbox 3.0.3 (http://www.shadowbox-js.com/). You can find a demo at http://euve1500.vserver.de:9080/gallery
