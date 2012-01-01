@@ -24,14 +24,29 @@ Upload images:
 * Create a folder "uploads" within the prudentGallery folder
 * Upload your images to this folder (This folder can contain folders too)
 
-IrfanView:
-----------
-Instead of using the standard mechanism of resizing the preview, it is recommended to use IrfanView (only Windows, http://www.irfanview.net/).
+Define image scaler:
+--------------------
+
+By default Java will be used for scaling the images, but this is not recommended. You can use any command line image scaler or ImageJ.
+
+IrfanView (only Windows):
+-------------------------
+Instead of using the standard mechanism of resizing the preview, it is recommended to use IrfanView (http://www.irfanview.net/).
 
 * Download and install IrfanView: http://www.irfanview.net/
 * Make sure IrfanView is available via the PATH variable of Windows
 * Edit the file "settings.js" within the applications folder:
-** Add the line: Packages.me.scrobble.images.ImageUtils.setImageScaler(new Packages.me.scrobble.images.scalers.IrfanViewImageScaler())
+** Uncomment the line: imageScaler = new Packages.me.scrobble.images.scalers.IrfanViewImageScaler()
+
+ImageJ:
+-------
+This image scaler should be used, where only Java is available. This scaler can be quite
+slow (first calls for a gallery might be slow), as it only scales one image at a time.
+
+* Download the "Platform Independent" version of ImageJ (http://rsbweb.nih.gov/ij/download.html)
+* Extract the file "ij.jar" to Prudence "lbraries" folder
+* Edit the file "settings.js" within the applications folder:
+** Uncomment the line: imageScaler = new Packages.me.scrobble.images.scalers.ImageJImageScaler()
 
 ImageMagick:
 ------------
@@ -43,4 +58,6 @@ Alternatively you can use ImageMagick via the CommandLineImageScaler
 License:
 ========
 
-You can freely use, edit and distribute this gallery as want. To use it for commercial purposes you have to obtain a commercial license for Shadowbox.
+* You can freely use, edit and distribute this gallery. 
+* You may not sell this software.
+* To use it for commercial purposes you have to obtain a commercial license for Shadowbox.

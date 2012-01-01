@@ -9,11 +9,19 @@ applicationContactEmail = 'prudentGallery@rest.scrobble.me'
 
 showDebugOnError = true
 
+// Default ImageScaler (not recommended)
+imageScaler = new Packages.me.scrobble.images.scalers.DefaultImageScaler()
+
 // IrfanView (Windows only)
-//Packages.me.scrobble.images.ImageUtils.setImageScaler(new Packages.me.scrobble.images.scalers.IrfanViewImageScaler())
+//imageScaler = new Packages.me.scrobble.images.scalers.IrfanViewImageScaler()
 
 // ImageMagick (Windows version, Linux commands might differ)
 //imagemagick_commands_thumbnail = 'cmd /C convert "@SOURCE@" -resize @WIDTH@x@HEIGHT@^^ -gravity center -extent @WIDTH@x@HEIGHT@ "@TARGET@"'
 //imagemagick_commands_large = 'cmd /C convert "@SOURCE@" -resize @WIDTH@x@HEIGHT@ "@TARGET@"'
-//Packages.me.scrobble.images.ImageUtils.setImageScaler(new Packages.me.scrobble.images.scalers.CommandLineImageScaler(imagemagick_commands_thumbnail,imagemagick_commands_large))
+//imageScaler = new Packages.me.scrobble.images.scalers.CommandLineImageScaler(imagemagick_commands_thumbnail,imagemagick_commands_large)
 
+// ImageJ
+// imageScaler = new Packages.me.scrobble.images.scalers.ImageJImageScaler()
+
+// Set the ImageScaler
+Packages.me.scrobble.images.ImageUtils.setImageScaler(imageScaler)
